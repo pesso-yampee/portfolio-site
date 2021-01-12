@@ -1,9 +1,42 @@
-<% var title = "TOP"; var description = "トップのdescription"; %> <% include
+<% var title = "portfolio-site"; var description = "ポートフォリオサイト"; %> <% include
 src/ejs/template/_head %>
-
-<h1>トップページへようこそ！！</h1>
-<a href="/about">to about</a>
-<div class="p-home-bg"></div>
-<div class="p-home-grid"></div>
-
+<% var imgPath = "/assets/images"; %>
+<% include src/ejs/template/_header %>
+<% var history = [
+    {when: "2019/03", action: "龍谷大学 社会学部社会学科 卒業"},
+    {when: "2019/04", action: "新卒でコールセンターに就職"},
+    {when: "2020/04", action: "コールセンターを退職"},
+    {when: "2020/05", action: "東京でSES事業を行っているベンチャー企業に転職"},
+]; %>
+<% var skill = ["HTML", "CSS", "JavaScript"]; %>
+<div class="l-main">
+  <div class="p-top-main-container">
+    <div class="p-top-main-container__mv"></div>
+    <!-- 自己紹介エリア -->
+    <section class="p-top-main-container__profile">
+      <h1 class="p-top-main-container__profile__title">About<br>私について</h1>
+      <div class="p-top-main-container__profile__img"></div>
+      <div class="p-top-main-container__profile__about">
+        <p class="p-top-main-container__profile__about__name">山﨑 淳平（やまさき じゅんぺい</p>
+        <p class="p-top-main-container__profile__about__birthday">1996年6月22日生まれ / 24歳</p>
+        <dl class="p-top-main-container__profile__about__career">
+          <% for (var i = 0; i < history.length; i++) { %>
+            <dt class="p-top-main-container__profile__about__career--when"><%= history[i].when %></dt>
+            <dd class="p-top-main-container__profile__about__career--what"><%= history[i].action %></dd>
+          <% } %>
+        </dl>
+        <label class="p-top-main-container__profile__about__skill" for="skill">プログラミングスキル</label>
+        <ul class="p-top-main-container__profile__about__skillList">
+          <% for (var i = 0; i < skill.length; i++) { %>
+          <li class="p-top-main-container__profile__about__skillItem"><%= skill[i] %></li>
+          <% } %>
+        </ul>
+      </div>
+    </section>
+    <!-- 作品紹介エリア -->
+    <section class="p-top-main-container__Works"></section>
+    <!-- 問い合わせエリア -->
+    <section class="p-top-main-container__Contact"></section>
+  </div>
+</div>
 <% include src/ejs/template/_footer %>

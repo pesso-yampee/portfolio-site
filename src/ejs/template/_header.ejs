@@ -1,0 +1,11 @@
+<% var menuItem = ["Top", "About", "Works", "Contact"]; %>
+<div class="l-header">
+  <div class="c-header-container">
+    <p class="c-header-container__name">Junpei Yamasaki</p>
+    <ul class="c-header-container__list">
+      <% for (var i = 0; i < menuItem.length; i++) { %>
+        <li class="c-header-container__list" id=""><%= menuItem[i] %></li>
+      <% } %>
+    </ul>
+  </div><!-- /.c-header-container -->
+</div><!-- /.l-header -->
