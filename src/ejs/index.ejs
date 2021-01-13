@@ -1,5 +1,5 @@
-<% var title = "portfolio-site"; var description = "ポートフォリオサイト"; %> <% include
-src/ejs/template/_head %>
+<% var title = "portfolio-site"; var description = "ポートフォリオサイト"; %>
+<% include src/ejs/template/_head %>
 <% var imgPath = "/assets/images"; %>
 <% include src/ejs/template/_header %>
 <% var history = [
@@ -9,12 +9,15 @@ src/ejs/template/_head %>
     {when: "2020/05", action: "東京でSES事業を行っているベンチャー企業に転職"},
 ]; %>
 <% var skill = ["HTML", "CSS", "JavaScript"]; %>
+<% var formLabelJa = ["氏名", "ふりがな", "メールアドレス", "お問い合わせ内容"]; %>
+<% var formLabelEn = ["name", "furigana", "adress", "content"]; %>
+<% var formExample = ["例) 山田 太郎", "例) やまだ たろう", "例) contact@xxx.com"]; %>
 <div class="l-main">
   <div class="p-top-main-container">
     <div class="p-top-main-container__mv"></div>
     <!-- 自己紹介エリア -->
     <section class="p-top-main-container__profile">
-      <h1 class="p-top-main-container__profile__title">About<br>私について</h1>
+      <h1 class="p-top-main-container__profile__ttl c-top-blockHeading__ttl">About<br>私について</h1>
       <div class="p-top-main-container__profile__img"></div>
       <div class="p-top-main-container__profile__about">
         <p class="p-top-main-container__profile__about__name">山﨑 淳平（やまさき じゅんぺい</p>
@@ -34,9 +37,36 @@ src/ejs/template/_head %>
       </div>
     </section>
     <!-- 作品紹介エリア -->
-    <section class="p-top-main-container__Works"></section>
+    <section class="p-top-main-container__works">
+      <h1 class="p-top-main-container__works__ttl　c-top-blockHeading__ttl">Works<br>これまでの実績</h1>
+      <div class="p-top-main-container__works__inner">
+        <ul class="p-top-main-container__works__inner__list">
+          <% for (var i = 0; i < 6; i++) { %>
+          <li class="p-top-main-container__works__inner__item"></li>
+          <% } %>
+        </ul>
+      </div>
+    </section>
     <!-- 問い合わせエリア -->
-    <section class="p-top-main-container__Contact"></section>
+    <section class="p-top-main-container__contact">
+      <h1 class="p-top-main-container__contact__ttl c-top-blockHeading__ttl">Contact<br>お問い合わせ</h1>
+      <form>
+        <dl class="p-top-main-container__contact__form">
+          <% for (var i = 0; i < formLabelJa.length; i++) { %>
+            <dt class="p-top-main-container__contact__label"><%= formLabelJa[i] %></dt>
+            <% if (i === 3)  { %>
+              <dd class="p-top-main-container__contact__txt"><textarea name="<%= formLabelEn[i] %>" id="" cols="30" rows="10"></textarea></dd>
+            <% } else { %>
+              <dd class="p-top-main-container__contact__txt"><input type="text" name="<%= formLabelEn[i] %>" id=""></dd>
+            <% } %>
+            <dd class="p-top-main-container__contact__example"><%= formExample[i] %></dd>
+          <% } %>
+        </dl>
+      </form>
+      <button type="submit">送信</button>
+    </section>
+
+    <small class="p-top-main-container__copyright">©2021 Junpei Yamasaki</small>
   </div>
 </div>
 <% include src/ejs/template/_footer %>

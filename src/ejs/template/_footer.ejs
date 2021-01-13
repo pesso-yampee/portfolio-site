@@ -1,3 +1,13 @@
+<% var menuItem = ["Top", "About", "Works", "Contact"]; %>
+  <footer class="l-footer">
+    <nav class="c-footer-nav">
+      <ul class="c-footer-list">
+        <% for (var i = 0; i < menuItem.length; i++) { %>
+        <li class="c-footer-item"><%= menuItem[i] %></li>
+        <% } %>
+      </ul>
+    </nav>
+  </footer>
 </div><!-- l-wrap -->
 </body>
 </html>
