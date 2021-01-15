@@ -1,6 +1,11 @@
 <% var menuItem = ["Top", "About", "Works", "Contact"]; %>
   <footer class="l-footer">
-    <nav class="c-footer-nav">
+    <div class="c-footer-sns">
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-github"></i>
+    </div>
+    <small class="c-footer-copyright">©2021 Junpei Yamasaki</small>
+    <nav class="c-footer-nav u-hidden-pc">
       <ul class="c-footer-list">
         <% for (var i = 0; i < menuItem.length; i++) { %>
         <li class="c-footer-item"><%= menuItem[i] %></li>
