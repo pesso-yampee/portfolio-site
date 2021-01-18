@@ -1,0 +1,12 @@
+.l-header {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  margin-top: -140px;
+  // padding: 10px 0;
+  background-color: $colorWhite;
+
+  @include mq("u-sp") {
+    display: none;
+  }
+}

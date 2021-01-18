@@ -1,0 +1,7 @@
+.l-outer {
+  padding-top: 140px;
+
+  @include mq("u-sp") {
+    padding: 0;
+  }
+}
