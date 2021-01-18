@@ -1,14 +1,52 @@
+<% var formLabel = ["氏名", "メールアドレス", "件名", "お問い合わせ内容"]; %>
+<% var entryName = ["entry.2005620554", "entry.1045781291", "entry.1062944632", "entry.839337160"]; %>
+<% var formExample = ["例) 山田 太郎", "例) contact@xxx.com", "例）xxxについて", ""]; %>
 <% var menuItem = ["Top", "About", "Works", "Contact"]; %>
   <footer class="l-footer">
-    <div class="c-footer-sns">
-      <i class="fab fa-twitter"></i>
-      <i class="fab fa-github"></i>
+    <!-- 問い合わせエリア -->
+    <section class="c-footer-contact">
+      <h1 class="c-blockHeading__ttl">Contact</h1>
+      <h2 class="c-footer-contact__ttl--sub c-blockHeading__ttl--sub">お問い合わせ</h2>
+      <div class="c-footer-contact__twitter u-hidden-sp">
+        <p class="c-footer-contact__twitter__txt">Twitterからでもご連絡頂けます</p>
+        <a href="https://twitter.com/pesso_2260" class="c-footer-contact__twitter__link">
+          <p class="c-footer-contact__twitteer__icon"><i class="devicon-twitter-original colored"></i></p>
+        </a>
+      </div>
+      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfAe-vkhc-KvGQUP8a3Rgy7YAJbdhZI1ZOp5EgR5k9IsaYD8A/formResponse" method="POST">
+        <dl class="c-footer-contact__form">
+        <% for (var i = 0; i < formLabel.length; i++) { %>
+          <dt class="c-footer-contact__label"><%= formLabel[i] %></dt>
+          <% if (i === 3)  { %>
+          <dd class="c-footer-contact__txt">
+            <textarea name="<%= entryName[i] %>" cols="30" rows="10" placeholder="お問い合わせ内容を記入してください"></textarea>
+            <p class="c-footer-contact__txt__example"><%= formExample[i] %></p>
+          </dd>
+          <% } else if (i === 1) { %>
+          <dd class="c-footer-contact__txt">
+            <input type="email" name="<%= entryName[i] %>">
+            <p class="c-footer-contact__txt__example"><%= formExample[i] %></p>
+          </dd>
+          <% } else { %>
+          <dd class="c-footer-contact__txt">
+            <input type="text" name="<%= entryName[i] %>">
+            <p class="c-footer-contact__txt__example"><%= formExample[i] %></p>
+          </dd>
+          <% } %>
+        <% } %>
+        </dl>
+      </form>
+      <a href="#" class="c-footer-contact__btn__submit">送信</a>
+    </section>
+    <div class="c-footer-sns u-hidden-pc">
+      <a href="https://twitter.com/pesso_2260"><i class="fab fa-twitter c-icon-sns"></i></a></i>
+      <a href="https://github.com/pesso-yampee"><i class="fab fa-github c-icon-sns"></i></a>
     </div>
-    <small class="c-footer-copyright">©2021 Junpei Yamasaki</small>
+    <p class="c-footer-copyright"><small>©2021 Junpei Yamasaki</small></p>
     <nav class="c-footer-nav u-hidden-pc">
       <ul class="c-footer-list">
         <% for (var i = 0; i < menuItem.length; i++) { %>
-        <li class="c-footer-item"><%= menuItem[i] %></li>
+        <li class="c-footer-list__item"><%= menuItem[i] %></li>
         <% } %>
       </ul>
     </nav>

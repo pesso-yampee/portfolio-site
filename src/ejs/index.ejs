@@ -1,72 +1,59 @@
 <% var title = "portfolio-site"; var description = "ポートフォリオサイト"; %>
 <% include src/ejs/template/_head %>
-<% var imgPath = "/assets/images"; %>
+<% var imgPath = "/assets/images/"; %>
 <% include src/ejs/template/_header %>
 <% var history = [
-    {when: "2019/03", action: "龍谷大学 社会学部社会学科 卒業"},
-    {when: "2019/04", action: "新卒でコールセンターに就職"},
-    {when: "2020/04", action: "コールセンターを退職"},
-    {when: "2020/05", action: "東京でSES事業を行っているベンチャー企業に転職"},
+    "2019/03 龍谷大学 社会学部社会学科 卒業",
+    "2019/04 新卒でコールセンターに就職",
+    "2020/04 コールセンターを退職",
+    "2020/05 東京でSES事業を行っているベンチャー企業に転職",
 ]; %>
-<% var skill = ["HTML", "CSS", "JavaScript"]; %>
-<% var formLabel = ["氏名", "メールアドレス", "件名", "お問い合わせ内容"]; %>
-<% var entryName = ["entry.2005620554", "entry.1045781291", "entry.1062944632", "entry.839337160"]; %>
-<% var formExample = ["例) 山田 太郎", "例) contact@xxx.com", "xxxについて", ""]; %>
+<% var skill = ["HTML", "CSS", "JavaScript", "jQuery", "Sass", "node.js", "npm", "webpack", "babel"]; %>
+<% var skillImg = ["html5-plain", "css3-plain", "javascript-plain", "jquery-plain", "sass-original", "nodejs-plain", "npm-original-wordmark", "webpack-plain", "babel-plain"]; %>
 <div class="l-main">
   <div class="p-top-container">
-    <div class="p-top-container__mv"></div>
+    <h1 class="p-top-container__mv__txt u-hidden-pc">Junpei Yamasaki<br>portfolio-site</h1>
+  <div class="p-top-container__mv"></div>
     <!-- 自己紹介エリア -->
     <section class="p-top-container__profile">
-      <h1 class="p-top-container__profile__ttl c-top-blockHeading__ttl">About<br>私について</h1>
-      <div class="p-top-container__profile__img"></div>
-      <div class="p-top-container__profile__about">
-        <p class="p-top-container__profile__about__name">山﨑 淳平（やまさき じゅんぺい</p>
-        <p class="p-top-container__profile__about__birthday">1996年6月22日生まれ / 24歳</p>
-        <dl class="p-top-container__profile__about__career">
-          <% for (var i = 0; i < history.length; i++) { %>
-            <dt class="p-top-container__profile__about__career--when"><%= history[i].when %></dt>
-            <dd class="p-top-container__profile__about__career--what"><%= history[i].action %></dd>
-          <% } %>
-        </dl>
-        <label class="p-top-container__profile__about__skill" for="skill">プログラミングスキル</label>
-        <ul class="p-top-container__profile__about__skillList">
-          <% for (var i = 0; i < skill.length; i++) { %>
-          <li class="p-top-container__profile__about__skillItem"><%= skill[i] %></li>
-          <% } %>
-        </ul>
-      </div>
+      <h1 class="p-top-container__profile__ttl c-blockHeading__ttl">About</h1>
+      <h2 class="c-blockHeading__ttl--sub">私について</h2>
+      <div class="p-top-container__profile__cont">
+        <p class="p-top-container__profile__img">
+          <img src="<%= imgPath %>img-profile.jpg" alt="">
+        </p>
+        <div class="p-top-container__profile__about">
+          <p class="p-top-container__profile__about__name">山﨑 淳平</p>
+          <p class="p-top-container__profile__about__birthday">1996年6月22日生まれ / 24歳</p>
+          <ul class="p-top-container__profile__about__career">
+            <% for (var i = 0; i < history.length; i++) { %>
+              <li class="p-top-container__profile__about__career__txt"><%- history[i] %></li>
+            <% } %>
+          </ul>
+          <label class="p-top-container__profile__about__skill__heading" for="skill">Skill</label>
+          <ul class="p-top-container__profile__about__skillList">
+            <% for (var i = 0; i < skill.length; i++) { %>
+            <li class="p-top-container__profile__about__skillItem">
+              <p class="p-top-container__profile__about__skillItem__txt"><%= skill[i] %></p>
+              <p class="c-icon-lang"><i class="devicon-<%= skillImg[i] %> colored"></i></p>
+            </li>
+            <% } %>
+          </ul>
+        </div><!-- /.p-top-container__profile__about -->
+      </div><!-- /.p-top-container__profile__cont -->
     </section>
-    <!-- 作品紹介エリア -->
-    <section class="p-top-container__works">
-      <h1 class="p-top-container__works__ttl c-top-blockHeading__ttl">Works<br>これまでの実績</h1>
-      <div class="p-top-container__works__inner">
-        <ul class="p-top-container__works__inner__list">
-          <% for (var i = 0; i < 6; i++) { %>
-          <li class="p-top-container__works__inner__item"></li>
-          <% } %>
-        </ul>
-      </div>
-    </section>
-    <!-- 問い合わせエリア -->
-    <section class="p-top-container__contact">
-      <h1 class="p-top-container__contact__ttl c-top-blockHeading__ttl">Contact<br>お問い合わせ</h1>
-      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfAe-vkhc-KvGQUP8a3Rgy7YAJbdhZI1ZOp5EgR5k9IsaYD8A/formResponse" method="POST">
-        <dl class="p-top-container__contact__form">
-        <% for (var i = 0; i < formLabel.length; i++) { %>
-          <dt class="p-top-container__contact__label"><%= formLabel[i] %></dt>
-          <% if (i === 3)  { %>
-          <dd class="p-top-container__contact__txt"><textarea name="<%= entryName[i] %>" cols="30" rows="10"></textarea></dd>
-          <% } else if (i === 1) { %>
-          <dd class="p-top-container__contact__txt"><input type="email" name="<%= entryName[i] %>"></dd>
-          <% } else { %>
-          <dd class="p-top-container__contact__txt"><input type="text" name="<%= entryName[i] %>"></dd>
-          <% } %>
-          <dd class="p-top-container__contact__example"><%= formExample[i] %></dd>
+  </div><!-- /.p-top-container -->
+  <!-- 作品紹介エリア -->
+  <section class="p-top-works">
+    <h1 class="p-top-works__ttl c-blockHeading__ttl">Works</h1>
+    <h2 class="c-blockHeading__ttl--sub">これまでの実績</h2>
+    <div class="p-top-works__inner">
+      <ul class="p-top-works__inner__list">
+        <% for (var i = 0; i < 6; i++) { %>
+        <li class="p-top-works__inner__item"></li>
         <% } %>
-        </dl>
-      </form>
-      <button type="submit" name="submit" class="p-top-container__contact__btn--info">送信</button>
-    </section>
-  </div>
+      </ul>
+    </div>
+  </section>
 </div>
 <% include src/ejs/template/_footer %>

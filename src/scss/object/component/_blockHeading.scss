@@ -1,0 +1,36 @@
+.c-blockHeading__ttl,
+.c-blockHeading__ttl--sub {
+  text-align: center;
+}
+
+.c-blockHeading__ttl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  
+  &::before, &::after {
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background-color: #000;
+    content: '';
+
+    @include mq("u-sp") {
+      width: 10vw;
+    }
+  }
+
+  &::before {
+    margin-right: 250px;
+  }
+
+  &::after {
+    margin-left: 250px;
+  }
+}
+
+.c-blockHeading__ttl--sub {
+  margin-bottom: 50px;
+}

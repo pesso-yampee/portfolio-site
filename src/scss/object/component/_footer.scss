@@ -1,0 +1,169 @@
+.c-footer-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.c-footer-contact__ttl--sub {
+  margin-bottom: 20px;
+}
+
+.c-footer-contact__twitter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.c-footer-contact__twitteer__icon {
+  font-size: 30px;
+  transition: all 1s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.c-footer-contact__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 40%;
+  margin: 0 auto 30px;
+
+  @include mq("u-sp") {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin-bottom: 0;
+  }
+}
+
+.c-footer-contact__label {
+  width: 40%;
+
+  @include mq("u-sp") {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+
+.c-footer-contact__txt {
+  width: 60%;
+
+  @include mq("u-sp") {
+    width: 100%;
+  }
+}
+
+.c-footer-contact__txt__example {
+  margin-bottom: 30px;
+  color: rgba($colorGray, .8);
+}
+
+.c-footer-contact__txt > textarea,
+.c-footer-contact__txt > input {
+  background-color: $colorLightGray;
+}
+
+.c-footer-copyright {
+  text-align: center;
+}
+
+.c-footer-contact__txt > input {
+  width: 70%;
+  padding: 10px 0;
+  text-indent: .5em;
+
+  @include mq("u-sp") {
+    width: 100%;
+  }
+}
+
+.c-footer-contact__txt > textarea {
+  width: 100%;
+  padding: 15px;
+}
+
+.c-footer-contact__btn__submit {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  padding: .5em 4em;
+  border: 2px solid;
+  text-align: center;
+  transition: .3s;
+  
+  &::before {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    background-color: $colorBlack;
+    transform-origin: right top;
+    transform: skewX(-30deg) scale(0, 1);
+    transition: transform .3s;
+    content: '';
+  }
+  
+  &:hover {
+    color: $colorWhite;
+    
+    &::before {
+      transform-origin: left top;
+      transform: skewX(-30deg) scale(1, 1);
+    }
+  }
+}
+
+.c-footer-sns {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.c-footer-copyright {
+  margin-bottom: 50px;
+}
+
+.c-footer-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: $colorBlack
+}
+
+.c-footer-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-footer-list__item {
+  font-size: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: $colorWhite;
+
+  &:not(:last-child) {
+    display: flex;
+    align-items: center;
+    margin-right: 7vw;
+    
+    &::after {
+      display: inline-block;
+      position: relative;
+      right: 0;
+      width: 1px;
+      height: 10px;
+      margin-left: 7vw;
+      background-color: rgba($colorWhite, .5);
+      content: '';
+    }
+  }
+}
