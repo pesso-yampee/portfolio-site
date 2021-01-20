@@ -26,24 +26,32 @@
 <meta name="twitter:image" content="" /><!--絶対パスで記述-->
 
 <title>portfolio-site</title>
-<link href="assets/stylesheets/bundlef19baf8430d1843a0074.css" rel="stylesheet"></head>
-<body>
+<link href="assets/stylesheets/bundlec52bb6201ba58d6ba9ad.css" rel="stylesheet"></head>
+<body id="body">
 <div class="l-outer">
 
 
 
-<div class="l-header">
+<div class="l-header" id="header">
   <div class="c-header-container">
     <h1 class="c-header-container__name">Junpei Yamasaki</h1>
     <ul class="c-header-container__list u-hidden-sp">
       
-        <li class="c-header-container__item" id="">Top</li>
+        <li class="c-header-container__item">
+          <a href="#Top">Top</a>
+        </li>
       
-        <li class="c-header-container__item" id="">About</li>
+        <li class="c-header-container__item">
+          <a href="#About">About</a>
+        </li>
       
-        <li class="c-header-container__item" id="">Works</li>
+        <li class="c-header-container__item">
+          <a href="#Works">Works</a>
+        </li>
       
-        <li class="c-header-container__item" id="">Contact</li>
+        <li class="c-header-container__item">
+          <a href="#Contact">Contact</a>
+        </li>
       
     </ul>
   </div><!-- /.c-header-container -->
@@ -53,101 +61,153 @@
 
 <div class="l-main">
   <div class="p-top-container">
-    <h1 class="p-top-container__mv__txt u-hidden-pc">Junpei Yamasaki<br>portfolio-site</h1>
-  <div class="p-top-container__mv"></div>
+    <h1 class="p-top-mv__txt u-hidden-pc">Junpei Yamasaki<br>portfolio-site</h1>
+    <div class="p-top-mv" id="Top"></div>
     <!-- 自己紹介エリア -->
-    <section class="p-top-container__profile">
-      <h1 class="p-top-container__profile__ttl c-blockHeading__ttl">About</h1>
+    <section class="p-top-profile c-block">
+      <h1 class="p-top-profile__ttl c-blockHeading__ttl" id="About">About</h1>
       <h2 class="c-blockHeading__ttl--sub">私について</h2>
-      <div class="p-top-container__profile__cont">
-        <p class="p-top-container__profile__img">
+      <div class="p-top-profile__cont">
+        <p class="p-top-profile__img">
           <img src="/assets/images/img-profile.jpg" alt="">
         </p>
-        <div class="p-top-container__profile__about">
-          <p class="p-top-container__profile__about__name">山﨑 淳平</p>
-          <p class="p-top-container__profile__about__birthday">1996年6月22日生まれ / 24歳</p>
-          <ul class="p-top-container__profile__about__career">
+        <div class="p-top-profile__about">
+          <p class="p-top-profile__about__name">山﨑 淳平</p>
+          <p class="p-top-profile__about__birthday">1996年6月22日生まれ / 24歳</p>
+          <dl class="p-top-profile__about__career">
             
-              <li class="p-top-container__profile__about__career__txt">2019/03 龍谷大学 社会学部社会学科 卒業</li>
+              <dt class="p-top-profile__about__career--when">2019/03</dt>
+              <dd class="p-top-profile__about__career--what">龍谷大学 社会学部社会学科 卒業</dd>
             
-              <li class="p-top-container__profile__about__career__txt">2019/04 新卒でコールセンターに就職</li>
+              <dt class="p-top-profile__about__career--when">2019/04</dt>
+              <dd class="p-top-profile__about__career--what">新卒でコールセンターに就職</dd>
             
-              <li class="p-top-container__profile__about__career__txt">2020/04 コールセンターを退職</li>
+              <dt class="p-top-profile__about__career--when">2020/04</dt>
+              <dd class="p-top-profile__about__career--what">コールセンターを退職</dd>
             
-              <li class="p-top-container__profile__about__career__txt">2020/05 東京でSES事業を行っているベンチャー企業に転職</li>
+              <dt class="p-top-profile__about__career--when">2020/05</dt>
+              <dd class="p-top-profile__about__career--what">東京でSES事業を行っているベンチャー企業に転職</dd>
             
-          </ul>
-          <label class="p-top-container__profile__about__skill__heading" for="skill">Skill</label>
-          <ul class="p-top-container__profile__about__skillList">
+          </dl>
+          <label class="p-top-profile__about__skill__heading" for="skill">Skill</label>
+          <ul class="p-top-profile__about__skillList">
             
-            <li class="p-top-container__profile__about__skillItem">
-              <p class="p-top-container__profile__about__skillItem__txt">HTML</p>
+            <li class="p-top-profile__about__skillItem">
+              <p class="p-top-profile__about__skillItem__txt">HTML</p>
               <p class="c-icon-lang"><i class="devicon-html5-plain colored"></i></p>
             </li>
             
-            <li class="p-top-container__profile__about__skillItem">
-              <p class="p-top-container__profile__about__skillItem__txt">CSS</p>
+            <li class="p-top-profile__about__skillItem">
+              <p class="p-top-profile__about__skillItem__txt">CSS</p>
               <p class="c-icon-lang"><i class="devicon-css3-plain colored"></i></p>
             </li>
             
-            <li class="p-top-container__profile__about__skillItem">
-              <p class="p-top-container__profile__about__skillItem__txt">JavaScript</p>
+            <li class="p-top-profile__about__skillItem">
+              <p class="p-top-profile__about__skillItem__txt">JavaScript</p>
               <p class="c-icon-lang"><i class="devicon-javascript-plain colored"></i></p>
             </li>
             
-            <li class="p-top-container__profile__about__skillItem">
-              <p class="p-top-container__profile__about__skillItem__txt">jQuery</p>
+            <li class="p-top-profile__about__skillItem">
+              <p class="p-top-profile__about__skillItem__txt">jQuery</p>
               <p class="c-icon-lang"><i class="devicon-jquery-plain colored"></i></p>
             </li>
             
-            <li class="p-top-container__profile__about__skillItem">
-              <p class="p-top-container__profile__about__skillItem__txt">Sass</p>
+            <li class="p-top-profile__about__skillItem">
+              <p class="p-top-profile__about__skillItem__txt">Sass</p>
               <p class="c-icon-lang"><i class="devicon-sass-original colored"></i></p>
             </li>
             
-            <li class="p-top-container__profile__about__skillItem">
-              <p class="p-top-container__profile__about__skillItem__txt">node.js</p>
+            <li class="p-top-profile__about__skillItem">
+              <p class="p-top-profile__about__skillItem__txt">node.js</p>
               <p class="c-icon-lang"><i class="devicon-nodejs-plain colored"></i></p>
             </li>
             
-            <li class="p-top-container__profile__about__skillItem">
-              <p class="p-top-container__profile__about__skillItem__txt">npm</p>
+            <li class="p-top-profile__about__skillItem">
+              <p class="p-top-profile__about__skillItem__txt">npm</p>
               <p class="c-icon-lang"><i class="devicon-npm-original-wordmark colored"></i></p>
             </li>
             
-            <li class="p-top-container__profile__about__skillItem">
-              <p class="p-top-container__profile__about__skillItem__txt">webpack</p>
+            <li class="p-top-profile__about__skillItem">
+              <p class="p-top-profile__about__skillItem__txt">webpack</p>
               <p class="c-icon-lang"><i class="devicon-webpack-plain colored"></i></p>
             </li>
             
-            <li class="p-top-container__profile__about__skillItem">
-              <p class="p-top-container__profile__about__skillItem__txt">babel</p>
+            <li class="p-top-profile__about__skillItem">
+              <p class="p-top-profile__about__skillItem__txt">babel</p>
               <p class="c-icon-lang"><i class="devicon-babel-plain colored"></i></p>
             </li>
             
           </ul>
-        </div><!-- /.p-top-container__profile__about -->
-      </div><!-- /.p-top-container__profile__cont -->
+        </div><!-- /.p-top-profile__about -->
+      </div><!-- /.p-top-profile__cont -->
     </section>
   </div><!-- /.p-top-container -->
   <!-- 作品紹介エリア -->
-  <section class="p-top-works">
-    <h1 class="p-top-works__ttl c-blockHeading__ttl">Works</h1>
+  <section class="p-top-works c-block">
+    <h1 class="p-top-works__ttl c-blockHeading__ttl" id="Works">Works</h1>
     <h2 class="c-blockHeading__ttl--sub">これまでの実績</h2>
     <div class="p-top-works__inner">
       <ul class="p-top-works__inner__list">
         
-        <li class="p-top-works__inner__item"></li>
+        <li class="p-top-works__inner__item">
+          <a href="#"></a>
+          <p class="c-mask">
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+          </p>
+        </li>
         
-        <li class="p-top-works__inner__item"></li>
+        <li class="p-top-works__inner__item">
+          <a href="#"></a>
+          <p class="c-mask">
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+          </p>
+        </li>
         
-        <li class="p-top-works__inner__item"></li>
+        <li class="p-top-works__inner__item">
+          <a href="#"></a>
+          <p class="c-mask">
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+          </p>
+        </li>
         
-        <li class="p-top-works__inner__item"></li>
+        <li class="p-top-works__inner__item">
+          <a href="#"></a>
+          <p class="c-mask">
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+          </p>
+        </li>
         
-        <li class="p-top-works__inner__item"></li>
+        <li class="p-top-works__inner__item">
+          <a href="#"></a>
+          <p class="c-mask">
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+          </p>
+        </li>
         
-        <li class="p-top-works__inner__item"></li>
+        <li class="p-top-works__inner__item">
+          <a href="#"></a>
+          <p class="c-mask">
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+          </p>
+        </li>
         
       </ul>
     </div>
@@ -159,8 +219,8 @@
 
   <footer class="l-footer">
     <!-- 問い合わせエリア -->
-    <section class="c-footer-contact">
-      <h1 class="c-blockHeading__ttl">Contact</h1>
+    <section class="c-footer-contact c-block">
+      <h1 class="c-blockHeading__ttl" id="Contact">Contact</h1>
       <h2 class="c-footer-contact__ttl--sub c-blockHeading__ttl--sub">お問い合わせ</h2>
       <div class="c-footer-contact__twitter u-hidden-sp">
         <p class="c-footer-contact__twitter__txt">Twitterからでもご連絡頂けます</p>
@@ -168,8 +228,8 @@
           <p class="c-footer-contact__twitteer__icon"><i class="devicon-twitter-original colored"></i></p>
         </a>
       </div>
-      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfAe-vkhc-KvGQUP8a3Rgy7YAJbdhZI1ZOp5EgR5k9IsaYD8A/formResponse" method="POST">
-        <dl class="c-footer-contact__form">
+      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfAe-vkhc-KvGQUP8a3Rgy7YAJbdhZI1ZOp5EgR5k9IsaYD8A/formResponse" method="POST" name="form" class="c-footer-contact__form">
+        <dl class="c-footer-contact__formList">
         
           <dt class="c-footer-contact__label">氏名</dt>
           
@@ -204,28 +264,36 @@
           
         
         </dl>
+        <a href="#" class="c-footer-contact__submit" onclick="document.form.submit();">送信</a>
       </form>
-      <a href="#" class="c-footer-contact__btn__submit">送信</a>
     </section>
-    <div class="c-footer-sns u-hidden-pc">
-      <a href="https://twitter.com/pesso_2260"><i class="fab fa-twitter c-icon-sns"></i></a></i>
-      <a href="https://github.com/pesso-yampee"><i class="fab fa-github c-icon-sns"></i></a>
+    <div class="c-footer-sns">
+      <a href="https://twitter.com/pesso_2260" class="c-footer-sns__twitter"><i class="fab fa-twitter c-icon-sns"></i></a></i>
+      <a href="https://github.com/pesso-yampee" class="c-footer-sns__github"><i class="fab fa-github c-icon-sns"></i></a>
     </div>
     <p class="c-footer-copyright"><small>©2021 Junpei Yamasaki</small></p>
-    <nav class="c-footer-nav u-hidden-pc">
+    <nav class="c-footer-nav u-hidden-pc" id="footerNav">
       <ul class="c-footer-list">
         
-        <li class="c-footer-list__item">Top</li>
+        <li class="c-footer-list__item">
+          <a href="#Top">Top</a>
+        </li>
         
-        <li class="c-footer-list__item">About</li>
+        <li class="c-footer-list__item">
+          <a href="#About">About</a>
+        </li>
         
-        <li class="c-footer-list__item">Works</li>
+        <li class="c-footer-list__item">
+          <a href="#Works">Works</a>
+        </li>
         
-        <li class="c-footer-list__item">Contact</li>
+        <li class="c-footer-list__item">
+          <a href="#Contact">Contact</a>
+        </li>
         
       </ul>
     </nav>
   </footer>
 </div><!-- l-wrap -->
-<script type="text/javascript" src="assets/javascripts/bundlef19baf8430d1843a0074.js"></script></body>
+<script type="text/javascript" src="assets/javascripts/bundlec52bb6201ba58d6ba9ad.js"></script></body>
 </html>

@@ -3,54 +3,63 @@
 <% var imgPath = "/assets/images/"; %>
 <% include src/ejs/template/_header %>
 <% var history = [
-    "2019/03 龍谷大学 社会学部社会学科 卒業",
-    "2019/04 新卒でコールセンターに就職",
-    "2020/04 コールセンターを退職",
-    "2020/05 東京でSES事業を行っているベンチャー企業に転職",
+    {when: "2019/03", what: "龍谷大学 社会学部社会学科 卒業"},
+    {when: "2019/04", what: "新卒でコールセンターに就職"},
+    {when: "2020/04", what: "コールセンターを退職"},
+    {when: "2020/05", what: "東京でSES事業を行っているベンチャー企業に転職"},
 ]; %>
 <% var skill = ["HTML", "CSS", "JavaScript", "jQuery", "Sass", "node.js", "npm", "webpack", "babel"]; %>
 <% var skillImg = ["html5-plain", "css3-plain", "javascript-plain", "jquery-plain", "sass-original", "nodejs-plain", "npm-original-wordmark", "webpack-plain", "babel-plain"]; %>
 <div class="l-main">
   <div class="p-top-container">
-    <h1 class="p-top-container__mv__txt u-hidden-pc">Junpei Yamasaki<br>portfolio-site</h1>
-  <div class="p-top-container__mv"></div>
+    <h1 class="p-top-mv__txt u-hidden-pc">Junpei Yamasaki<br>portfolio-site</h1>
+    <div class="p-top-mv" id="Top"></div>
     <!-- 自己紹介エリア -->
-    <section class="p-top-container__profile">
-      <h1 class="p-top-container__profile__ttl c-blockHeading__ttl">About</h1>
+    <section class="p-top-profile c-block">
+      <h1 class="p-top-profile__ttl c-blockHeading__ttl" id="About">About</h1>
       <h2 class="c-blockHeading__ttl--sub">私について</h2>
-      <div class="p-top-container__profile__cont">
-        <p class="p-top-container__profile__img">
+      <div class="p-top-profile__cont">
+        <p class="p-top-profile__img">
           <img src="<%= imgPath %>img-profile.jpg" alt="">
         </p>
-        <div class="p-top-container__profile__about">
-          <p class="p-top-container__profile__about__name">山﨑 淳平</p>
-          <p class="p-top-container__profile__about__birthday">1996年6月22日生まれ / 24歳</p>
-          <ul class="p-top-container__profile__about__career">
+        <div class="p-top-profile__about">
+          <p class="p-top-profile__about__name">山﨑 淳平</p>
+          <p class="p-top-profile__about__birthday">1996年6月22日生まれ / 24歳</p>
+          <dl class="p-top-profile__about__career">
             <% for (var i = 0; i < history.length; i++) { %>
-              <li class="p-top-container__profile__about__career__txt"><%- history[i] %></li>
+              <dt class="p-top-profile__about__career--when"><%- history[i].when %></dt>
+              <dd class="p-top-profile__about__career--what"><%- history[i].what %></dd>
             <% } %>
-          </ul>
-          <label class="p-top-container__profile__about__skill__heading" for="skill">Skill</label>
-          <ul class="p-top-container__profile__about__skillList">
+          </dl>
+          <label class="p-top-profile__about__skill__heading" for="skill">Skill</label>
+          <ul class="p-top-profile__about__skillList">
             <% for (var i = 0; i < skill.length; i++) { %>
-            <li class="p-top-container__profile__about__skillItem">
-              <p class="p-top-container__profile__about__skillItem__txt"><%= skill[i] %></p>
+            <li class="p-top-profile__about__skillItem">
+              <p class="p-top-profile__about__skillItem__txt"><%= skill[i] %></p>
               <p class="c-icon-lang"><i class="devicon-<%= skillImg[i] %> colored"></i></p>
             </li>
             <% } %>
           </ul>
-        </div><!-- /.p-top-container__profile__about -->
-      </div><!-- /.p-top-container__profile__cont -->
+        </div><!-- /.p-top-profile__about -->
+      </div><!-- /.p-top-profile__cont -->
     </section>
   </div><!-- /.p-top-container -->
   <!-- 作品紹介エリア -->
-  <section class="p-top-works">
-    <h1 class="p-top-works__ttl c-blockHeading__ttl">Works</h1>
+  <section class="p-top-works c-block">
+    <h1 class="p-top-works__ttl c-blockHeading__ttl" id="Works">Works</h1>
     <h2 class="c-blockHeading__ttl--sub">これまでの実績</h2>
     <div class="p-top-works__inner">
       <ul class="p-top-works__inner__list">
         <% for (var i = 0; i < 6; i++) { %>
-        <li class="p-top-works__inner__item"></li>
+        <li class="p-top-works__inner__item">
+          <a href="#"></a>
+          <p class="c-mask">
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+            テキストが入ります。テキストが入ります。テキストが入ります。<br>
+          </p>
+        </li>
         <% } %>
       </ul>
     </div>

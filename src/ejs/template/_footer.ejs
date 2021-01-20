@@ -4,8 +4,8 @@
 <% var menuItem = ["Top", "About", "Works", "Contact"]; %>
   <footer class="l-footer">
     <!-- 問い合わせエリア -->
-    <section class="c-footer-contact">
-      <h1 class="c-blockHeading__ttl">Contact</h1>
+    <section class="c-footer-contact c-block">
+      <h1 class="c-blockHeading__ttl" id="Contact">Contact</h1>
       <h2 class="c-footer-contact__ttl--sub c-blockHeading__ttl--sub">お問い合わせ</h2>
       <div class="c-footer-contact__twitter u-hidden-sp">
         <p class="c-footer-contact__twitter__txt">Twitterからでもご連絡頂けます</p>
@@ -13,8 +13,8 @@
           <p class="c-footer-contact__twitteer__icon"><i class="devicon-twitter-original colored"></i></p>
         </a>
       </div>
-      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfAe-vkhc-KvGQUP8a3Rgy7YAJbdhZI1ZOp5EgR5k9IsaYD8A/formResponse" method="POST">
-        <dl class="c-footer-contact__form">
+      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfAe-vkhc-KvGQUP8a3Rgy7YAJbdhZI1ZOp5EgR5k9IsaYD8A/formResponse" method="POST" name="form" class="c-footer-contact__form">
+        <dl class="c-footer-contact__formList">
         <% for (var i = 0; i < formLabel.length; i++) { %>
           <dt class="c-footer-contact__label"><%= formLabel[i] %></dt>
           <% if (i === 3)  { %>
@@ -35,18 +35,20 @@
           <% } %>
         <% } %>
         </dl>
+        <a href="#" class="c-footer-contact__submit" onclick="document.form.submit();">送信</a>
       </form>
-      <a href="#" class="c-footer-contact__btn__submit">送信</a>
     </section>
-    <div class="c-footer-sns u-hidden-pc">
-      <a href="https://twitter.com/pesso_2260"><i class="fab fa-twitter c-icon-sns"></i></a></i>
-      <a href="https://github.com/pesso-yampee"><i class="fab fa-github c-icon-sns"></i></a>
+    <div class="c-footer-sns">
+      <a href="https://twitter.com/pesso_2260" class="c-footer-sns__twitter"><i class="fab fa-twitter c-icon-sns"></i></a></i>
+      <a href="https://github.com/pesso-yampee" class="c-footer-sns__github"><i class="fab fa-github c-icon-sns"></i></a>
     </div>
     <p class="c-footer-copyright"><small>©2021 Junpei Yamasaki</small></p>
-    <nav class="c-footer-nav u-hidden-pc">
+    <nav class="c-footer-nav u-hidden-pc" id="footerNav">
       <ul class="c-footer-list">
         <% for (var i = 0; i < menuItem.length; i++) { %>
-        <li class="c-footer-list__item"><%= menuItem[i] %></li>
+        <li class="c-footer-list__item">
+          <a href="#<%= menuItem[i] %>"><%= menuItem[i] %></a>
+        </li>
         <% } %>
       </ul>
     </nav>
