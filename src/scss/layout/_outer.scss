@@ -1,5 +1,6 @@
 .l-outer {
   padding-top: 140px;
+  background-color: $bgColorOffWhite;
 
   @include mq("u-sp") {
     padding: 0;

@@ -1,5 +1,5 @@
-/* -----------------------------
-// p-top-container
+/*
+  p-top-container
 -------------------------------- */
 .p-top-container {
   @include mq("o-sp") {
@@ -8,10 +8,8 @@
   }
 }
 
-/*
-// p-top-container__mv
--------------------------------- */
-.p-top-container__mv__txt {
+/* container__mv */
+.p-top-mv__txt {
   display: block;
   position: absolute;
   z-index: 100;
@@ -31,7 +29,7 @@
 
 }
 
-.p-top-container__mv {
+.p-top-mv {
   position: relative;
   width: 100%;
   height: 700px;
@@ -47,14 +45,12 @@
   }
 }
 
-/*
-// p-top-container__profile
--------------------------------- */
-.p-top-container__profile {
+/* container__profile */
+.p-top-profile {
   margin-bottom: 100px;
 }
 
-.p-top-container__profile__cont {
+.p-top-profile__cont {
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -62,30 +58,29 @@
   @include mq("u-sp") {
     flex-direction: column;
     align-items: center;
-    width: 100%;
   }
 }
 
-.p-top-container__profile__img {
+.p-top-profile__img {
+  width: 75%;
   margin-right: 50px;
 
   @include mq("u-sp") {
-    width: 75%;
     margin: 0 0 30px;
   }
 }
 
-.p-top-container__profile__img > img{
-  min-width: 100px;
+.p-top-profile__about {
   width: 100%;
-  height: auto;
+
+  @include mq("u-sp") {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.p-top-container__profile__about {
-  width: 100%;
-}
-
-.p-top-container__profile__about__name {
+.p-top-profile__about__name {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 15px;
@@ -95,7 +90,7 @@
   }
 }
 
-.p-top-container__profile__about__birthday {
+.p-top-profile__about__birthday {
   margin-bottom: 15px;
 
   @include mq("u-sp") {
@@ -103,50 +98,59 @@
   }
 }
 
-.p-top-container__profile__about__career {
+.p-top-profile__about__career {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   margin-bottom: 30px;
 
   @include mq("u-sp") {
-    flex-direction: column;
     font-size: 14px;
   }
 }
 
-.p-top-container__profile__about__skill__heading {
+.p-top-profile__about__career--when {
+  width: 100px;
+}
+
+.p-top-profile__about__career--what {
+  width: 75%;
+
+  @include mq("u-sp") {
+    width: 75%;
+  }
+}
+
+.p-top-profile__about__skill__heading {
   display: inline-block;
-  width: 70%;
-  margin-bottom: 20px;
+  width: 75%;
+  margin-bottom: 25px;
   padding-bottom: 5px;
   border-bottom: 1px solid;
   font-size: 30px;
-  
+
   @include mq("u-sp") {
     width: 100%;
     text-align: center;
   }
 }
 
-.p-top-container__profile__about__skillList {
+.p-top-profile__about__skillList {
   display: flex;
   flex-wrap: wrap;
   width: 70%;
+  margin-left: -10px;
 
   @include mq("u-sp") {
     width: 100%;
+    margin-left: 0;
   }
 }
 
-.p-top-container__profile__about__skillItem {
+.p-top-profile__about__skillItem {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc((100% - (30px * 2)) / 3);
-
-  &:not(:nth-child(3n)) {
-    margin-right: 30px;
-  }
+  width: calc(100% / 4);
 
   @include mq("u-sp") {
     width: calc(100% / 3);
@@ -164,12 +168,13 @@
 
 
 /*
-// p-top-works
+  p-top-works
 -------------------------------- */
 .p-top-works {
   margin-bottom: 100px;
 }
 
+/* works__inner */
 .p-top-works__inner {
   @include mq("o-sp") {
     width: 95%;
@@ -195,43 +200,6 @@
   width: calc((100% - (20px * 2)) / 3);
   height: 300px;
   background-color: $colorLightGray;
-  transition: .3s;
-  
-  &::before, &::after {
-    display: block;
-    position: absolute;
-    width: 120%;
-    height: 100%;
-    transform-origin: right top;
-    transform: scale(0, 1);
-    transition: transform .3s;
-  }
-  
-  &::before {
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgba($colorBlack, .1);
-    content: '';
-  }
-
-  &::after {
-    z-index: 2;
-    top: 30px;
-    left: 10px;
-    color: $colorWhite;
-    content: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。';
-
-    
-  }
-  
-  &:hover {
-    &::before, &::after {
-      transform-origin: left top;
-      transform: scale(1, 1);
-    }
-  }
-  
 
   @include mq("o-sp") {
     &:not(:nth-child(3n)) {
@@ -239,7 +207,7 @@
     }
     
     &:nth-last-child(n+4) {
-      margin-bottom: 60px;
+      margin-bottom: 20px;
     }
   }
   

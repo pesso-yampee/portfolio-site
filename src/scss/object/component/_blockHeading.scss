@@ -8,6 +8,10 @@
   justify-content: center;
   align-items: center;
   font-size: 30px;
+
+  @include mq("u-sp") {
+    font-size: 25px;
+  }
   
   &::before, &::after {
     display: inline-block;
@@ -18,16 +22,49 @@
     content: '';
 
     @include mq("u-sp") {
-      width: 10vw;
+      width: 50px;
     }
   }
 
   &::before {
     margin-right: 250px;
+
+    @include mq("u-sp") {
+      margin-right: 165px;
+    }
   }
 
   &::after {
     margin-left: 250px;
+
+    @include mq("u-sp") {
+      margin-left: 165px;
+    }
+  }
+
+  &:last-child {
+    &::before {
+      display: inline-block;
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background-color: #000;
+    content: '';
+    margin-right: 250px;
+
+      @include mq("u-sp") {
+        margin-right: 200px;
+        width: 10vw;
+      }
+    }
+  
+    &::after {
+      margin-left: 250px;
+  
+      @include mq("u-sp") {
+        margin-left: 150px;
+      }
+    }
   }
 }
 
