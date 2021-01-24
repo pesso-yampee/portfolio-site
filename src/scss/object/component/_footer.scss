@@ -117,7 +117,7 @@
     transition: transform .3s;
     content: '';
   }
-  
+
   &:hover {
     color: $colorWhite;
     
@@ -129,18 +129,16 @@
 }
 
 
-.c-footer-nav {
+.c-footer-list {
+  display: flex;
   position: fixed;
+  justify-content: center;
+  z-index: 100;
+  align-items: center;
   bottom: 0;
   width: 100%;
   padding: 10px 20px;
-  background-color: $colorBlack
-}
-
-.c-footer-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: $colorBlack;
 }
 
 .c-footer-list__item {

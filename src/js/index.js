@@ -3,10 +3,14 @@ import router from './modules/Router'
 import '../scss/app.scss'
 
 $(() => {
+  /*
+    PCレイアウト時のヘッダーメニュー及び
+    SPレイアウト時のフッターメニューをクリックした時のスムーススクロール処理
+  */
   $('a[href^="#"]').on('click', function() {
     const speed        = 200,
-          headerHeight = $('#header').height(),
-          fNavHeight   = $('#footerNav').height(),
+          headerHeight = $('.jsi-header').height(),
+          fNavHeight   = $('.jsi-footer').height(),
           windowWidth  = $(window).width(),
           href         = $(this).attr('href'),
           target       = $(href == "#" || href == "" ? 'html': href);
