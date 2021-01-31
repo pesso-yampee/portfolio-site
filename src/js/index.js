@@ -27,4 +27,10 @@ $(() => {
 
     return false;
   });
+
+  $('.jsi-elem-hover').hover(
+    function() {
+      $('.jsc-elem-slide').toggleClass('is-active');
+    }
+  );
 })
