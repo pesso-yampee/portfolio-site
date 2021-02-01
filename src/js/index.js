@@ -30,7 +30,7 @@ $(() => {
 
   $('.jsi-elem-hover').hover(
     function() {
-      $('.jsc-elem-slide').toggleClass('is-active');
+      $(this).find('.jsc-elem-slide').toggleClass('is-active');
     }
   );
 })
