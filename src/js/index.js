@@ -27,10 +27,4 @@ $(() => {
 
     return false;
   });
-
-  $('.jsi-elem-hover').hover(
-    function() {
-      $(this).find('.jsc-elem-slide').toggleClass('is-active');
-    }
-  );
 })
