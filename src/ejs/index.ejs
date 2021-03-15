@@ -9,7 +9,6 @@
     {when: "2020/05", what: "東京でSES事業を行っているベンチャー企業に転職"},
 ]; %>
 <% var skill = ["HTML", "CSS", "JavaScript", "jQuery", "Sass", "node.js", "npm", "webpack", "babel"]; %>
-<% var skillImg = ["html5-plain", "css3-plain", "javascript-plain", "jquery-plain", "sass-original", "nodejs-plain", "npm-original-wordmark", "webpack-plain", "babel-plain"]; %>
 <div class="l-main">
   <div class="p-top-container">
     <h1 class="p-top-mv__txt u-hidden-pc">Junpei Yamasaki<br>portfolio-site</h1>
@@ -31,15 +30,6 @@
               <dd class="p-top-profile__about__career--what"><%- history[i].what %></dd>
             <% } %>
           </dl>
-          <label class="p-top-profile__about__skill__heading" for="skill">Skill</label>
-          <ul class="p-top-profile__about__skillList">
-            <% for (var i = 0; i < skill.length; i++) { %>
-            <li class="p-top-profile__about__skillItem">
-              <p class="p-top-profile__about__skillItem__txt"><%= skill[i] %></p>
-              <p class="c-icon-lang"><i class="devicon-<%= skillImg[i] %> colored"></i></p>
-            </li>
-            <% } %>
-          </ul>
         </div><!-- /.p-top-profile__about -->
       </div><!-- /.p-top-profile__cont -->
     </section>
