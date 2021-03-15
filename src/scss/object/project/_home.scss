@@ -197,17 +197,13 @@
 .p-top-works__inner__item {
   overflow: hidden;
   position: relative;
-  width: calc((100% - (20px * 2)) / 3);
+  width: calc((100% - (20px * 1)) / 2);
   height: 300px;
   background-color: $colorLightGray;
 
   @include mq("o-sp") {
-    &:not(:nth-child(3n)) {
+    &:not(:nth-child(2n)) {
       margin-right: 20px;
-    }
-    
-    &:nth-last-child(n+4) {
-      margin-bottom: 20px;
     }
   }
   
