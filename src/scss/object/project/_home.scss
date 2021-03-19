@@ -215,3 +215,53 @@
     }
   }
 }
+
+.p-top-worksList__item__title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.p-top-worksList__item__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-top-worksList__item__container > video {
+  width: 500px;
+  height: auto;
+  margin-right: 50px;
+}
+
+.c-link {
+  color: #337AB7;
+  
+  &:hover {
+    color: #4773BA;
+  }
+}
+
+.p-top-worksList__item__thumbnail {
+  margin-right: 50px;
+  transition: transform .3s, box-shadow .3s;
+
+  &:hover {
+    box-shadow: 8px 8px rgba($colorBlack, .8);
+    transform: translate(-10px, -10px);
+  }
+}
+
+.p-top-worksList__item__thumbnail > img {
+  width: 500px;
+  height: auto;
+}
+
+.p-top-worksList__item__summaryList__item {
+  margin-bottom: 20px;
+}
+
+/* 強調させたい部分 */
+.c-emphasis {
+  color: #ff0000;
+}
