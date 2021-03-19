@@ -1,6 +1,6 @@
 /*
-  p-top-container
--------------------------------- */
+p-top-container
+------------------------------- */
 .p-top-container {
   @include mq("o-sp") {
     width: 80%;
@@ -17,16 +17,16 @@
   left: 50px;
   color: $colorWhite;
   font-family: "Comic Sans MS";
-  content: '';
-  
+  content: "";
+
   &::first-letter {
     font-size: 40px;
     margin-right: -5px;
   }
+
   &::first-line {
     text-indent: -40px;
   }
-
 }
 
 .p-top-mv {
@@ -34,14 +34,13 @@
   width: 100%;
   height: 700px;
   margin: 0 auto 100px;
-  background: url(#{$bgPath}img-mv.jpg) no-repeat 50% 60%/cover;
+  background: url(#{$bgPath}img-mv.jpg) no-repeat 50% 60% / cover;
 
   @include mq("u-sp") {
     width: 100vw;
     height: 300px;
     margin: 0 0 40px;
     background: url(#{$bgPath}img-mv.jpg) no-repeat center/cover;
-
   }
 }
 
@@ -154,22 +153,21 @@
 
   @include mq("u-sp") {
     width: calc(100% / 3);
-    
-    &:nth-last-child(n+4) {
+
+    &:nth-last-child(n + 4) {
       margin-bottom: 20px;
     }
-    
+
     &:not(:last-child) {
       margin-right: 0;
     }
   }
 }
 
-
-
 /*
-  p-top-works
--------------------------------- */
+p-top-works
+------------------------------- */
+
 .p-top-works {
   margin-bottom: 100px;
 }
@@ -182,34 +180,26 @@
   }
 }
 
-.p-top-works__inner__list {
+.p-top-worksList {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  // flex-wrap: wrap;
 
   @include mq("u-sp") {
     flex-wrap: inherit;
-    flex-direction: column;
     justify-content: inherit;
     align-items: center;
   }
 }
 
-.p-top-works__inner__item {
-  overflow: hidden;
-  position: relative;
-  width: calc((100% - (20px * 1)) / 2);
-  height: 300px;
-  background-color: $colorLightGray;
+.p-top-worksList__item {
+  margin-bottom: 40px;
 
-  @include mq("o-sp") {
-    &:not(:nth-child(2n)) {
-      margin-right: 20px;
-    }
-  }
-  
   @include mq("u-sp") {
     width: 250px;
     height: 250px;
+
     &:not(:last-child) {
       margin-bottom: 30px;
     }
