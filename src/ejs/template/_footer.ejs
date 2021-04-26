@@ -3,41 +3,6 @@
 <% var formExample = ["例) 山田 太郎", "例) contact@xxx.com", "例）xxxについて", ""]; %>
 <% var menuItem = ["Top", "About", "Works", "Contact"]; %>
   <footer class="l-footer">
-    <!-- 問い合わせエリア -->
-    <section class="c-footer-contact c-block">
-      <h1 class="c-blockHeading__ttl" id="Contact">Contact</h1>
-      <h2 class="c-footer-contact__ttl--sub c-blockHeading__ttl--sub">お問い合わせ</h2>
-      <!-- <div class="c-footer-contact__twitter u-hidden-sp">
-        <p class="c-footer-contact__twitter__txt">Twitterからでもご連絡頂けます</p>
-        <a href="https://twitter.com/pesso_2260" class="c-footer-contact__twitter__link">
-          <p class="c-footer-contact__twitteer__icon"><i class="devicon-twitter-original colored"></i></p>
-        </a>
-      </div> -->
-      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfAe-vkhc-KvGQUP8a3Rgy7YAJbdhZI1ZOp5EgR5k9IsaYD8A/formResponse" method="POST" name="form" class="c-footer-contact__form">
-        <dl class="c-footer-contact__formList">
-        <% for (var i = 0; i < formLabel.length; i++) { %>
-          <dt class="c-footer-contact__label"><%= formLabel[i] %></dt>
-          <% if (i === 3)  { %>
-          <dd class="c-footer-contact__txt">
-            <textarea name="<%= entryName[i] %>" cols="30" rows="10" placeholder="お問い合わせ内容を記入してください"></textarea>
-            <p class="c-footer-contact__txt__example"><%= formExample[i] %></p>
-          </dd>
-          <% } else if (i === 1) { %>
-          <dd class="c-footer-contact__txt">
-            <input type="email" name="<%= entryName[i] %>">
-            <p class="c-footer-contact__txt__example"><%= formExample[i] %></p>
-          </dd>
-          <% } else { %>
-          <dd class="c-footer-contact__txt">
-            <input type="text" name="<%= entryName[i] %>">
-            <p class="c-footer-contact__txt__example"><%= formExample[i] %></p>
-          </dd>
-          <% } %>
-        <% } %>
-        </dl>
-        <button type="submit" name="submit" class="c-footer-contact__submit">確認する</button>
-      </form>
-    </section>
     <div class="c-footer-sns">
       <a href="https://twitter.com/pesso_2260" class="c-footer-sns__twitter"><i class="fab fa-twitter c-icon-sns"></i></a></i>
       <a href="https://github.com/pesso-yampee" class="c-footer-sns__github"><i class="fab fa-github c-icon-sns"></i></a>
